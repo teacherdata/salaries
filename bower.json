@@ -3,6 +3,7 @@
   "dependencies": {
     "font-awesome": "~4.4.0",
     "foundation": "zurb/bower-foundation",
+    "foundation-icons": "*",
     "jquery-ui": "~1.11.4"
   }
 }

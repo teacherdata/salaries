@@ -1,10 +1,10 @@
 # Paycompare
 
-An experiment visualizing teacher salaries by state and year.
+Use jQuery and Highcharts to chart and compare estimated average salaries for U.S. teachers, by state.
 
 ## Screenshot
 
-[![paycompare.chrisvogt.me](/app/images/screenshot.png)](http://paycompare.chrisvogt.me)
+[![paycompare.chrisvogt.me](/app/images/screenshot.jpg)](http://paycompare.chrisvogt.me)
 
 ### License
 
@@ -21,4 +21,4 @@ furnished to do so, subject to the following conditions:
 
 ___
 
-<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="Made with jQuery" height="70" align="right"> <img src="http://bower.io/img/bower-logo.svg" alt="Made with Bower" height="70" align="right">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="node.js" height="70" align="right"> <img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="70" align="right"> <img src="http://bower.io/img/bower-logo.svg" alt="Bower" height="70" align="right">
