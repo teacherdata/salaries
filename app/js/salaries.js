@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * GitHub Repository Overview.
  *
@@ -6,16 +8,16 @@
 $(function() {
   var endpoint = 'https://cdn.rawgit.com/chrisvogt/ed85273a674001e3c585/raw/d8db84d982d666dc9b5a18a5c60c6f8756818181/teacher-est-avg-salary.json';
 
-  init();
   function init() {
-    var data = $.ajax({
+    return $.ajax({
         url: endpoint,
-        dataType: "json",
+        dataType: 'json',
         success: function(r) {
           stateFactory(r);
         }
     }).responseJSON;
   }
+  init();
 
 /**
  * Create states.
@@ -29,20 +31,16 @@ $(function() {
 /**
  * Select box event handler.
  */
-  $('.states').change(function (s) {
-    id = $(this)[0].id;
-    console.log(id + ' should now equal ' + $(this).val());
+  $('.states').change(function () {
     if ($('#stateA').val() !== 'State A' && $('#stateB').val() !== 'State B') {
-      console.log('Attempting to change states...');
-      var data = $.ajax({
+      return $.ajax({
           url:  endpoint,
-          dataType: "json",
+          dataType: 'json',
           success: function(r) {
             stateFactory(r);
             setStates([$('#stateA').val(), $('#stateB').val()], r);
           }
       }).responseJSON;
-      // setStates(stateA, stateB);
     }
   });
 
@@ -86,7 +84,7 @@ $(function() {
  * Extracts values from a state set.
  */
   function getValues(series) {
-    values = [];
+    var values = [];
     for (var key in series) {
       if (series.hasOwnProperty(key)) {
         values.push(series[key]);

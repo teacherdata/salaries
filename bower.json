@@ -4,6 +4,7 @@
     "font-awesome": "~4.4.0",
     "foundation": "zurb/bower-foundation",
     "foundation-icons": "*",
+    "highcharts": "highcharts-release#~4.1.8",
     "jquery-ui": "~1.11.4"
   }
 }

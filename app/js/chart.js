@@ -1,3 +1,6 @@
+/* global Highcharts */
+'use strict';
+
 $(function () {
     $('#container').highcharts({
         chart: {
