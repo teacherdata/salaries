@@ -1,10 +1,14 @@
-# Paycompare
+# Teacher Salaries: 1969 to 2013
 
-Use jQuery and Highcharts to chart and compare estimated average salaries for U.S. teachers, by state.
+Compare two states to review a timeline of the estimated average annual salary of teachers in public elementary and secondary schools between 1969 and 2013 for each state. 
+
+Powered by data from the NCES' [Digest of Education Statistics](https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp).
+
+View live @ [teacher-salaries.chrisvogt.me](http://teacher-salaries.chrisvogt.me).
 
 ### Screenshot
 
-[![paycompare.chrisvogt.me](/app/images/screenshot.jpg)](http://paycompare.chrisvogt.me)
+[![Teacher Salaries: 1969 to 2013](/app/images/screenshot.jpg)](http://teacher-salaries.chrisvogt.me)
 
 ### License
 
@@ -22,7 +26,6 @@ furnished to do so, subject to the following conditions:
 ### Built with
 
 <p align="left">
-	<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="node.js" height="48">
 	<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
 	<img src="http://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
 	<img src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg" alt="grunt.js" height="48">
