@@ -6953,7 +6953,12 @@ blockquote,
   width: 96%; }
 
 #desc {
-  padding: 24px; }
+  padding: 24px 0;
+  overflow: hidden; }
+
+@media only screen and (min-width: 40.063em) {
+  #desc {
+    padding: 64px 0; } }
 
 .source,
 p,
@@ -6974,10 +6979,15 @@ cite {
   background: url(https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png) no-repeat;
   background-size: cover; }
 
-ul#states li {
+.states {
   background: #fefefe;
-  margin-bottom: 8px;
   border-radius: 8px; }
+
+#stateA {
+  margin-bottom: 14px; }
+
+@media only screen and (min-width: 40.063em) {
+  margin-bottom: 0; }
 
 .fa-twitter {
   color: #55acee; }
