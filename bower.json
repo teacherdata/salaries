@@ -1,10 +1,10 @@
 {
-  "name": "chrisvogt/paycompare",
+  "name": "chrisvogt/teacher-salaries",
   "dependencies": {
     "font-awesome": "~4.4.0",
     "foundation": "zurb/bower-foundation",
     "foundation-icons": "*",
-    "highcharts": "highcharts-release#~4.1.8",
+    "highcharts": "highcharts-release#~4.2",
     "jquery-ui": "~1.11.4"
   }
 }

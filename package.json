@@ -1,15 +1,15 @@
 {
-  "name": "paycompare",
+  "name": "teacher-salaries",
   "description": "Compare teacher salaries by state and year.",
-  "version": "0.0.1",
-  "homepage": "",
+  "version": "0.7.0",
+  "homepage": "https://github.com/chrisvogt/teacher-salaries",
   "author": {
     "name": "Chris Vogt",
     "email": "mail@chrisvogt.me"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisvogt/paycompare"
+    "url": "https://github.com/chrisvogt/teacher-salaries"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
