@@ -6917,11 +6917,23 @@ th.hide-for-touch {
  * paycompare styles
  */
 body {
-  background: #fcfff4;
-  /* Old browsers */ }
+  background-color: #eceff1; }
 
 h1 {
-  margin: 14px 0; }
+  margin: 0 auto auto;
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h1,
+blockquote,
+.subheader {
+  font-family: 'Merriweather', serif;
+  font-weight: 300; }
+
+.title-area a {
+  font-family: 'Quicksand', sans-serif; }
 
 .row-fullwidth {
   width: 100%;
@@ -6941,10 +6953,21 @@ h1 {
   width: 96%; }
 
 #desc {
-  margin: 48px auto; }
+  padding: 24px; }
+
+.source,
+p,
+ul,
+li,
+h2,
+h3,
+h4,
+cite {
+  font-family: 'Quicksand', sans-serif; }
 
 .source {
-  font-size: .875em; }
+  font-size: .875em;
+  padding: 12px 0; }
 
 .delaunay {
   background-color: #564D7F;
@@ -6956,7 +6979,7 @@ ul#states li {
   margin-bottom: 8px;
   border-radius: 8px; }
 
-.fi-social-twitter {
+.fa-twitter {
   color: #55acee; }
 
 /**
@@ -6968,7 +6991,7 @@ ul#states li {
 .footer {
   background-position: center;
   border-top: 1px solid white;
-  padding: 2rem 4rem;
+  padding: 24px;
   text-align: center;
   color: #efefef; }
   .footer h1 {
@@ -6980,22 +7003,25 @@ ul#states li {
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: 2.5rem;
     margin-bottom: 10px; }
   .footer p, .footer a, .footer blockquote {
     font-weight: 300;
     font-size: .8em;
     color: #efefef; }
+  .footer blockquote {
+    text-align: left; }
   .footer cite {
-    color: #cecece; }
+    color: #cecece;
+    text-align: right; }
 
 @media only screen and (min-width: 40.063em) {
   .footer .columns:nth-child(n+2) {
-    border-left: 1px solid #909090;
-    min-height: 280px; } }
+    border-left: 1px solid #7f5e97;
+    min-height: 180px; } }
 
 .footer-links {
-  list-style-type: none; }
+  list-style-type: none;
+  text-align: left; }
   .footer-links li {
     margin-top: .5em; }
 

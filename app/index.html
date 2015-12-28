@@ -90,9 +90,11 @@
         </div>
     </div>
     <div id="desc" class="row">
-        <div class="small-12 small-centered medium-12 medium-centered columns">
+        <div class="small-12 medium-6 columns">
             <h1 id="kitchen-sink">U.S. teacher average salary, by state</h1>
             <h3 class="subheader">Compare the estimated average annual salary of teachers in public elementary and secondary schools by state. </h3>
+        </div>
+        <div class="small-12 medium-6 columns">
             <p class="source">
                 Digest of Education Statistics. (2013, April). Estimated average annual salary of teachers in public elementary and secondary schools, by state: Selected years, 1969-70 through 2012-13 [Table]. Retrieved from <a href="https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp" title="Estimated average annual salary of teachers...">https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp</a>
             </p>
@@ -105,7 +107,7 @@
                 <div class="hl">
                     <i class="fi-graph-bar"></i>
                 </div>
-                <p>This page is an experiment by <i class="fi-social-twitter"></i> <a href="https://twitter.com/c1v0" title="c1v0 on Twitter">@c1v0</a>, and is made using JavaScript and jQuery to parse teacher pay data and feed it to Highcharts.</p>
+                <p>This page is an experiment by <i class="fa fa-twitter"></i> <a href="https://twitter.com/c1v0" title="c1v0 on Twitter">@c1v0</a>, and is made using JavaScript and jQuery to parse teacher pay data and feed it to Highcharts.</p>
             </div>
             <div class="small-12 medium-3 large-4 columns">
                 <div class="hl">
@@ -175,7 +177,21 @@
     <script src="js/chart.js"></script>
     <script src="js/salaries.js"></script>
     <!-- endbuild -->
-    <script>
+    <script type="text/rocketscript">
+      WebFontConfig = {
+        google: { families: [ 'Quicksand::latin', 'Merriweather:300,300italic:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <script type="text/rocketscript">
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
