@@ -10,11 +10,11 @@ $(function () {
             text: 'Avg. salary, public elementary and secondary school teachers'
         },
         legend: {
-            layout: 'vertical',
-            align: 'left',
-            verticalAlign: 'top',
-            floating: true,
-            borderWidth: 1,
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom',
+            floating: false,
+            borderWidth: 0,
             backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
         },
         xAxis: {
@@ -27,6 +27,10 @@ $(function () {
                 '2011-12',
                 '2012-13'
             ]
+        },
+        exporting: {
+            sourceWidth: 1600,
+            sourceHeight: 400
         },
         yAxis: {
             title: {

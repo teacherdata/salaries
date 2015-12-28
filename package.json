@@ -1,15 +1,15 @@
 {
-  "name": "paycompare",
+  "name": "teacher-salaries",
   "description": "Compare teacher salaries by state and year.",
-  "version": "0.0.1",
-  "homepage": "",
+  "version": "0.7.0",
+  "homepage": "https://github.com/chrisvogt/teacher-salaries",
   "author": {
     "name": "Chris Vogt",
     "email": "mail@chrisvogt.me"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisvogt/paycompare"
+    "url": "https://github.com/chrisvogt/teacher-salaries"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -18,7 +18,7 @@
     "grunt-contrib-connect": "~0.11.2",
     "grunt-contrib-copy": "~0.8.0",
     "grunt-contrib-cssmin": "~0.13.0",
-    "grunt-contrib-imagemin": "0.9.4",
+    "grunt-contrib-imagemin": "1.0.0",
     "grunt-contrib-jshint": "~0.11.2",
     "grunt-contrib-uglify": "~0.9.1",
     "grunt-contrib-watch": "~0.6.1",
