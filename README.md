@@ -8,7 +8,7 @@ View live @ [teachersalary.info](http://teachersalary.info).
 
 ### Screenshot
 
-[![Teacher Salaries: 1969 to 2013](/app/images/screenshot.png)](http://teachersalary.info)
+[![Teacher Salaries: 1969 to 2013](/app/images/screenshot.jpg)](http://teachersalary.info)
 
 ### License
 
