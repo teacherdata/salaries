@@ -6917,6 +6917,7 @@ th.hide-for-touch {
  * paycompare styles
  */
 body {
+  font-family: 'Merriweather', serif;
   background-color: #eceff1; }
 
 h1 {
@@ -6978,13 +6979,11 @@ blockquote,
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out; } }
 
-.source,
-p,
-ul,
-li,
-h2,
+small,
+blockquote,
 h3,
-h4,
+h1 a,
+#ctl h5,
 cite {
   font-family: 'Quicksand', sans-serif; }
 
@@ -6994,7 +6993,7 @@ cite {
 
 .delaunay {
   background-color: #564D7F;
-  background: url(https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png) no-repeat;
+  background: url("../images/delaunay-244.png") no-repeat;
   background-size: cover; }
 
 .states {
@@ -7027,14 +7026,16 @@ cite {
   .footer .hl i {
     font-size: 5em; }
   .footer h4 {
+    text-align: left;
     color: #cecece;
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px; }
-  .footer p, .footer a, .footer blockquote {
+  .footer p, .footer a, .footer i, .footer blockquote {
     font-weight: 300;
-    font-size: .8em;
+    font-size: .8em; }
+  .footer p, .footer a, .footer blockquote {
     color: #efefef; }
   .footer blockquote {
     text-align: left; }
@@ -7058,8 +7059,7 @@ cite {
  */
 #promote {
   background: #fafafa;
-  padding: 10px 0;
-  text-align: center; }
+  padding: 10px 0; }
   @media only screen and (min-width: 40.063em) {
     #promote p {
       text-align: left;

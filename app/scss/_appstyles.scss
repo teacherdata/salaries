@@ -5,6 +5,7 @@ $inverse-text: #efefef;
 $inverse-highlight: #cecece;
 
 body {
+  font-family: 'Merriweather', serif;
   background-color: #eceff1;
 }
 h1 {
@@ -53,15 +54,14 @@ blockquote,
   }
 }
 .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
-.source,
-p,
-ul,
-li,
-h2,
+small,
+blockquote,
 h3,
-h4,
+h1 a,
+#ctl h5,
 cite {
   font-family: 'Quicksand', sans-serif;
+
 }
 .source {
 	font-size: .875em;
@@ -69,7 +69,7 @@ cite {
 }
 .delaunay {
 	background-color: #564D7F;
-	background: url(https://cdn.rawgit.com/chrisvogt/chrisvogt.me/master/img/bg-delaunay.png) no-repeat;
+	background: url('../images/delaunay-244.png') no-repeat;
 	background-size: cover;
 }
 .states {
@@ -105,15 +105,18 @@ cite {
     font-size: 5em;
   }
   h4 {
+    text-align: left;
     color: $inverse-highlight;
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  p, a, blockquote {
+  p, a, i, blockquote {
     font-weight: 300; 
     font-size: .8em;
+  }
+  p, a, blockquote {
     color: $inverse-text;
   }
   blockquote {
@@ -148,7 +151,6 @@ cite {
 #promote {
     background: #fafafa;
     padding: 10px 0;
-    text-align: center;
     @media only screen and (min-width: 40.063em) {
         p {
             text-align: left;
