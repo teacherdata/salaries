@@ -1,3 +1,7 @@
+[![Build status](https://img.shields.io/travis/chrisvogt/teacher-salaries.svg?branch=master&style=flat-square)](https://travis-ci.org/chrisvogt/teacher-salaries)
+[![GitHub release](https://img.shields.io/github/release/chrisvogt/teacher-salaries.svg?style=flat-square)](https://github.com/chrisvogt/teacher-salaries/releases)
+[![GitHub license](https://img.shields.io/github/license/chrisvogt/teacher-salaries.svg?style=flat-square)](https://github.com/chrisvogt/teacher-salaries/blob/master/LICENSE)
+
 # Compare U.S. Teacher Salaries: 1969 to 2013
 
 Compare two states to review a timeline of the estimated average annual salary of teachers in public elementary and secondary schools between 1969 and 2013 for each state. 
@@ -8,7 +12,7 @@ View live @ [teachersalary.info](http://teachersalary.info).
 
 ### Screenshot
 
-[![Teacher Salaries: 1969 to 2013](/app/images/screenshot.png)](http://teachersalary.info)
+[![Teacher Salaries: 1969 to 2013](/app/images/screenshot.jpg)](http://teachersalary.info)
 
 ### License
 
