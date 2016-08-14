@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all NAVIGATION styles for the site/application.
+// -----------------------------------------------------------------------------
+
+#top-nav {
+	@include purple-gradient;
+
+	.name {
+		text-transform: uppercase;
+	}
+	.top-bar,
+	.top-bar-section ul li,
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		background: none;
+	}
+}
