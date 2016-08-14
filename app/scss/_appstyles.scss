@@ -1,265 +1,30 @@
-/**
- * paycompare styles
- */
-$inverse-text: #efefef;
-$inverse-highlight: #cecece;
+// -----------------------------------------------------------------------------
+// This file imports all application-wide Sass stylesheets.
+// -----------------------------------------------------------------------------
 
-body {
-  font-family: 'Merriweather', serif;
-  background-color: #eceff1;
-}
-h1 {
-  margin: 0 auto auto;
-  font-size: 1.75em;
-}
-h3 {
-  font-size: 1.25em;
-}
-h1,
-blockquote,
-.subheader {
-  font-family: 'Merriweather', serif;
-  font-weight: 300;
-}
-.title-area a {
-  font-family: 'Quicksand', sans-serif;
-}
-.row-fullwidth {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: initial;
-	.columns {
-		padding: 0;
-	}
-	#ctl {
-		border: 0;
-    background-position: center;
-	}
-}
-#ctl h5 {
-  color: #E1E6D9;
-}
-#ctl select {
-  width: 96%;
-}
-#desc {
-  overflow: hidden;
-  position: relative;
-  padding: 32px 14px;
-}
-@media only screen and (min-width: 40.063em) {
-  #desc {
-    padding: 64px 0;
-  }
-}
-.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
-small,
-blockquote,
-h3,
-h1 a,
-#ctl h5,
-cite {
-  font-family: 'Quicksand', sans-serif;
+/* Abstracts */
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-}
-.source {
-	font-size: .875em;
-  padding: 12px 0;
-}
-.delaunay {
-	background-color: #564D7F;
-	background: url('../images/delaunay-244.png') no-repeat;
-	background-size: cover;
-}
-.states {
-  background: #fefefe;
-  border-radius: 8px;
-}
-#stateA {
-  margin-bottom: 14px;
-}
-@media only screen and (min-width: 40.063em) {
-  margin-bottom: 0;
-}
-.fa-twitter {
-	color: #55acee;
-}
+/* Base */
+@import 'base/helpers';
+@import 'base/typography';
 
-/**
- * Footer
- */
-.full-width {
-  max-width: 1400px;
-}
-.footer {
-  background-position: center;
-  border-top: 1px solid white;
-  padding: 24px;
-  text-align: center;
-  color: $inverse-text;
-  h1 {
-  	line-height: 1.25em;
-  }
-  .hl i {
-    font-size: 5em;
-  }
-  h4 {
-    text-align: left;
-    color: $inverse-highlight;
-    font-size: 1em;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  p, a, i, blockquote {
-    font-weight: 300; 
-    font-size: .8em;
-  }
-  p, a, blockquote {
-    color: $inverse-text;
-  }
-  blockquote {
-    text-align: left;
-  }
-  cite {
-  	color: $inverse-highlight;
-    text-align: right;
-  }
-}
+/* Components */
+@import 'components/chart';
+@import 'components/controls';
+@import 'components/label';
+@import 'components/promo';
 
-@media only screen and (min-width: 40.063em) {
-.footer {
-  .columns:nth-child(n+2) {
-    border-left: 1px solid scale-color(#705385, $lightness: 10%);
-    min-height: 180px;
-  }
- }
-}
+/* Layout */
+@import 'layout/accents';
+@import 'layout/common';
+@import 'layout/footer';
+@import 'layout/navigation';
 
-.footer-links {
-  list-style-type: none;
-  text-align: left;
-  li {
-    margin-top: .5em;
-  }
-}
+/* Pages */
+@import 'pages/report';
 
-/**
- * Promotional pane
- */
-#promote {
-    background: #fafafa;
-    padding: 10px 0;
-    @media only screen and (min-width: 40.063em) {
-        p {
-            text-align: left;
-            padding: 24px 0; margin: 0;
-        }
-        a {
-            margin: 10px auto 0;
-        }
-    }
-}
-
-/**
- * Styled select
- * http://cssdeck.com/labs/styling-select-box-with-css3
- */
-
-/* The CSS */
-select {
-    padding:3px;
-    margin: 0;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    background: #f8f8f8;
-    color:#888;
-    border:none;
-    outline:none;
-    display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-    cursor:pointer;
-}
-
-/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    select {padding-right:18px}
-}
-
-label {position:relative}
-label:after {
-    content:'<>';
-    font:11px "Consolas", monospace;
-    color:#aaa;
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg);
-    right:8px; top:2px;
-    padding:0 0 2px;
-    border-bottom:1px solid #ddd;
-    position:absolute;
-    pointer-events:none;
-}
-label:before {
-    content:'';
-    right:6px; top:0px;
-    width:20px; height:20px;
-    background:#f8f8f8;
-    position:absolute;
-    pointer-events:none;
-    display:block;
-}
-
-/* Float Shadow */
-.hvr-float-shadow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-float-shadow:before {
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-  content: '';
-  top: 100%;
-  left: 5%;
-  height: 10px;
-  width: 90%;
-  opacity: 0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
-  /* W3C */
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform, opacity;
-  transition-property: transform, opacity;
-}
-.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-  /* move the element up by 5px */
-}
-.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
-  opacity: 1;
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
-  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-}
+/* Vendor */
+@import 'vendor/hover';
+@import 'vendor/select';

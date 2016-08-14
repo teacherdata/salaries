@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the FOOTER of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    @include purple-gradient(true);
+    background-position: center;
+    border-top: 1px solid white;
+    padding: 24px;
+    text-align: center;
+    color: $inverse-text;
+
+    h1 {
+        line-height: 1.25em;
+    }
+
+    .hl i {
+        font-size: 5em;
+    }
+
+    h4 {
+        text-align: left;
+        color: $inverse-highlight;
+        font-size: 1em;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    p, a, i, blockquote {
+        font-weight: 300;
+        font-size: .8em;
+    }
+
+    p, a, blockquote {
+        color: $inverse-text;
+    }
+
+    blockquote {
+        text-align: left;
+    }
+
+    cite {
+        color: $inverse-highlight;
+        text-align: right;
+    }
+}
+
+.footer-links {
+    list-style-type: none;
+    text-align: left;
+
+    li {
+        margin-top: .5em;
+    }
+}
+
+@media only screen and (min-width: 40.063em) {
+    .footer {
+        .columns:nth-child(n+2) {
+            min-height: 180px;
+        }
+    }
+}
