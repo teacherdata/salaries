@@ -5,6 +5,7 @@
     "foundation": "zurb/bower-foundation",
     "foundation-icons": "*",
     "highcharts": "highcharts-release#~4.2",
-    "jquery-ui": "~1.11.4"
+    "jquery-ui": "~1.11.4",
+    "jquery": "2"
   }
 }
