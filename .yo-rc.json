@@ -1,3 +1,6 @@
 {
-  "generator-zf5": {}
+  "generator-mocha": {
+    "ui": "tdd",
+    "rjs": false
+  }
 }
