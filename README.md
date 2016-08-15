@@ -22,8 +22,8 @@ View live @ [teachersalary.info](http://teachersalary.info).
 
 <p align="left">
 	<img src="http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" alt="jQuery" height="48">
+  <img src="https://cdn.rawgit.com/gulpjs/artwork/master/gulp-2x.png" alt="Gulp" height="48">
 	<img src="http://bower.io/img/bower-logo.svg" alt="Bower.js" height="48">
-	<img src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg" alt="grunt.js" height="48">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/CSS3_and_HTML5_badges.svg" alt="HTML5 &amp; CSS3" height="48">
 	<img src="https://cdn.rawgit.com/zurb/foundation-sites/develop/docs/assets/img/yeti.svg" alt="Zurb Foundation" height="48">
 </p>
