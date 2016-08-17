@@ -5,7 +5,7 @@
  *
  * @author Chris Vogt <mail@chrisvogt.me>
  */
-var salaries = (function() {
+var salaries = (function(document, $) {
 
   'use strict';
 
@@ -127,4 +127,4 @@ var salaries = (function() {
     init: init
   };
 
-})();
+})(document, jQuery);

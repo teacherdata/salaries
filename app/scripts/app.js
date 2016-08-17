@@ -18,7 +18,3 @@ var app = (function(document, $) {
         init: _init
     };
 })(document, jQuery);
-
-(function() {
-    app.init();
-})();
