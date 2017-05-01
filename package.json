@@ -31,6 +31,9 @@
     "main-bower-files": "^2.5.0",
     "wiredep": "^2.2.2"
   },
+  "scripts": {
+    "serve": "gulp serve"
+  },
   "eslintConfig": {
     "env": {
       "es6": true,

@@ -1,11 +1,9 @@
-// generated on 2016-08-15 using generator-webapp 2.1.0
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
-var ghPages = require('gulp-gh-pages');
-
+const ghPages = require('gulp-gh-pages');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
