@@ -32,7 +32,7 @@
     "wiredep": "^2.2.2"
   },
   "scripts": {
-    "serve": "gulp serve"
+    "start": "gulp serve"
   },
   "eslintConfig": {
     "env": {

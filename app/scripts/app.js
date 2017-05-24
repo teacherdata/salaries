@@ -1,20 +1,44 @@
-'use strict';
+$(() => {
+  'use strict'
 
-var app = (function(document, $) {
-    var docElem = document.documentElement,
-        _userAgentInit = function() {
-            docElem.setAttribute('data-useragent', navigator.userAgent);
-        },
-        _init = function() {
-            $(document).foundation();
-            // needed to use joyride
-            // doc: http://foundation.zurb.com/docs/components/joyride.html
-            $(document).on('click', '#start-jr', function () {
-                $(document).foundation('joyride', 'start');
-            });
-            _userAgentInit();
-        };
+  /**
+   * Salaries module
+   *
+   * Retrieves and formats teacher salary data
+   *
+   * @class
+   */
+  const app = ((document, $) => {
+    const docElem = document.documentElement
+
+    /** @constructs */
+    function init() {
+      $(document).foundation()
+      userAgentInit()
+      applyUIBindings()
+    }
+
+    /**
+    * @method userAgentInit Store the UA string.
+    */
+    function userAgentInit() {
+      docElem.setAttribute('data-useragent', navigator.userAgent)
+    }
+
+    /**
+    * @method applyUIBindings Apply UI bindings.
+    */
+    function applyUIBindings() {
+      /** @tutorial http://foundation.zurb.com/docs/components/joyride.html */
+      $(document).on('click', '#start-jr', () => {
+        $(document).foundation('joyride', 'start')
+      })
+    }
+
     return {
-        init: _init
-    };
-})(document, jQuery);
+      init: init
+    }
+  })(document, jQuery)
+
+  app.init()
+})
