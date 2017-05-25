@@ -13,7 +13,7 @@ $(() => {
     const endpoint = 'https://cdn.rawgit.com/chrisvogt/ed85273a674001e3c585/raw/d8db84d982d666dc9b5a18a5c60c6f8756818181/teacher-est-avg-salary.json'
 
     /** @constructs */
-    function init() {
+    function init () {
       applyUIBindings()
       get(stateFactory)
     }
@@ -23,7 +23,7 @@ $(() => {
     * @param cb A callback function the data is passed to.
     * @method
     */
-    function get(cb) {
+    function get (cb) {
       return $.ajax({
         url: endpoint,
         dataType: 'json',
@@ -35,7 +35,7 @@ $(() => {
     * Create states.
     * @param data The raw data containing states data.
     */
-    function stateFactory(data) {
+    function stateFactory (data) {
       const states = extractStates(data)
 
       buildStateOptions(states)
@@ -49,7 +49,7 @@ $(() => {
     /**
     * Extracts an array of states from the states object.
     */
-    function extractStates(data) {
+    function extractStates (data) {
       let states = []
 
       for (let state in data) {
@@ -64,7 +64,7 @@ $(() => {
     /**
     * Builds state options for form select inputs.
     */
-    function buildStateOptions(states) {
+    function buildStateOptions (states) {
       let el = $('.states')
 
       for (var state in states) {
@@ -75,7 +75,7 @@ $(() => {
     /**
     * Loads state data into the chart series.
     */
-    function setStates(states, data) {
+    function setStates (states, data) {
       let chart = $('#container').highcharts()
 
       for (let i = 0, max = 2; i < max; i++) {
@@ -92,7 +92,7 @@ $(() => {
     /**
     * Extracts values from a state set.
     */
-    function getValues(series) {
+    function getValues (series) {
       let values = []
 
       for (var key in series) {
@@ -107,14 +107,14 @@ $(() => {
     /**
     * @method applyUIBindings Apply UI bindings.
     */
-    function applyUIBindings() {
+    function applyUIBindings () {
       // state dropdown change events
-      $('.states').change(function() {
+      $('.states').change(function () {
         if ($('#stateA').val() !== 'State A' && $('#stateB').val() !== 'State B') {
           return $.ajax({
             url: endpoint,
             dataType: 'json',
-            success: function(r) {
+            success: function (r) {
               stateFactory(r)
               setStates([$('#stateA').val(), $('#stateB').val()], r)
             }
@@ -127,7 +127,7 @@ $(() => {
      * Returns a random number above 0 below a max length.
      * @method randomNumber
      */
-    function randomNumber(max) {
+    function randomNumber (max) {
       return Math.floor(Math.random() * max)
     }
 

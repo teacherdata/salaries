@@ -12,7 +12,7 @@ $(() => {
     const docElem = document.documentElement
 
     /** @constructs */
-    function init() {
+    function init () {
       $(document).foundation()
       userAgentInit()
       applyUIBindings()
@@ -21,14 +21,14 @@ $(() => {
     /**
     * @method userAgentInit Store the UA string.
     */
-    function userAgentInit() {
+    function userAgentInit () {
       docElem.setAttribute('data-useragent', navigator.userAgent)
     }
 
     /**
     * @method applyUIBindings Apply UI bindings.
     */
-    function applyUIBindings() {
+    function applyUIBindings () {
       /** @tutorial http://foundation.zurb.com/docs/components/joyride.html */
       $(document).on('click', '#start-jr', () => {
         $(document).foundation('joyride', 'start')

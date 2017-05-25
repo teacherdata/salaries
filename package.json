@@ -29,22 +29,14 @@
     "gulp-uglify": "^1.1.0",
     "gulp-useref": "^3.0.0",
     "main-bower-files": "^2.5.0",
+    "standard": "*",
     "wiredep": "^2.2.2"
   },
   "scripts": {
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "test": "standard"
   },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true,
-      "browser": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ]
-    }
+  "standard": {
+    "globals": [ "$", "jQuery" ]
   }
 }
