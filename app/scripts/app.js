@@ -13,9 +13,18 @@ $(() => {
 
     /** @constructs */
     function init () {
-      $(document).foundation()
+      initPlugins()
       userAgentInit()
       applyUIBindings()
+    }
+
+    /**
+     * @method initPlugins Initializes necessary plugins.
+     */
+    function initPlugins () {
+      if ($.fn.foundation && typeof $.fn.foundation === 'function') {
+        $(document).foundation()
+      }
     }
 
     /**

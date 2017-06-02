@@ -1,4 +1,6 @@
 $(() => {
+  'use strict'
+
   /**
   * Salaries module
   *
@@ -7,8 +9,6 @@ $(() => {
   * @class
   */
   const salaries = ((document, $) => {
-    'use strict'
-
     /** @constant {string} */
     const endpoint = 'https://cdn.rawgit.com/chrisvogt/ed85273a674001e3c585/raw/d8db84d982d666dc9b5a18a5c60c6f8756818181/teacher-est-avg-salary.json'
 
