@@ -8,7 +8,7 @@
     An open source project by Chris Vogt <@C1V0>
     https://github.com/chrisvogt/teacher-salaries
  -->
-    <title>Teacher Salaries by US State</title>
+    <title>Teacher Salaries by State</title>
 
     <meta name="description" content="Compare estimated average salaries for public elementary and secondary school teachers in the U.S. by state.">
     <meta name="author" content="Chris Vogt">
@@ -33,7 +33,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-    <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-title" content="Teacher Pay Comparison">
     <meta name="application-name" content="Teacher Pay Comparison">
     <meta name="msapplication-TileColor" content="#108787">
@@ -63,11 +62,6 @@
           </li>
           <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
         </ul>
-        <section class="top-bar-section">
-          <ul class="left">
-            <li><a href="https://www.chrisvogt.me"><i class="fa fa-home"></i> Home</a></li>
-          </ul>
-        </section>
       </nav>
     </div>
     <div class="row row-fullwidth">
@@ -97,12 +91,12 @@
     <div id="desc" class="row row-fullwidth">
       <div class="small-12 medium-10 medium-centered columns">
         <div class="small-12 medium-6 columns">
-          <h1 id="kitchen-sink">Average teacher salary by US state</h1>
-          <h3 class="subheader">Compare the estimated average annual salary of teachers in public elementary and secondary schools by state</h3>
+          <h1 id="kitchen-sink">Average teacher salary by state</h1>
+          <h3 class="subheader">Compare the estimated average annual salary of teachers in public elementary and secondary schools, by U.S. state.</h3>
         </div>
         <div class="small-12 medium-6 columns">
           <p class="source">
-            Digest of Education Statistics. (2013, April). Estimated average annual salary of teachers in public elementary and secondary schools by state: Selected years, 1969-70 through 2012-13 [Table]. Retrieved from <a href="https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp" title="Estimated average annual salary of teachers...">https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp</a>
+            Digest of Education Statistics. (2013, April). Estimated average annual salary of teachers in public elementary and secondary schools by state: Selected years, 1969-70 through 2012-13 [Table]. Retrieved from <a href="https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp" title="Estimated average annual salary of teachers...">https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp</a>.
           </p>
           <p>
             <small>Constant dollars based on the Consumer Price Index (CPI), prepared by the Bureau of Labor Statistics, U.S. Department of Labor, adjusted to a school-year basis. The CPI does not account for differences in inflation rates from state to state.</small>
@@ -127,9 +121,9 @@
           <div class="hl">
             <i class="fi-graph-bar"></i>
           </div>
-          <p>This page is an experiment by <i class="fa fa-twitter"></i> <a href="https://twitter.com/c1v0" title="c1v0 on Twitter">@c1v0</a> created using JavaScript and jQuery to create teacher pay chart.</p>
+          <p>This page is an experiment by <i class="fa fa-twitter"></i> <a href="https://twitter.com/c1v0" title="c1v0 on Twitter">@c1v0</a> created created using JavaScript and teacher salary data from the National Center for Education Statistics (NCES).</p>
         </div>
-        <div class="small-12 large-4 columns">
+        <div class="small-12 large-6 columns">
           <div class="hl">
             <i class="fi-quote"></i>
           </div>
@@ -145,23 +139,6 @@
               <a href="https://www.chrisvogt.me" title="CHRISVOGT.me">About Me</a>
             </li>
             <li>
-              <i class="fa fa-floppy-o"></i>
-              <a href="http://projects.chrisvogt.me" title="Projects on CHRISVOGT.me">My Projects</a>
-            </li>
-            <li>
-              <i class="fa fa-area-chart"></i>
-              <a href="http://stats.chrisvogt.me" title="Chris Vogt's open source stats">Code Stats</a>
-            </li>
-          <ul>
-        </div>
-        <div class="small-6 large-2 columns">
-          <h4>Follow Me</h4>
-          <ul class="footer-links">
-            <li>
-              <i class="fa fa-github-square"></i>
-              <a href="https://github.com/chrisvogt" title="Chris Vogt on GitHub">GitHub</a>
-            </li>
-            <li>
               <i class="fa fa-twitter-square"></i>
               <a href="https://twitter.com/c1v0" title="@c1v0 on Twitter">Twitter</a>
             </li>
@@ -170,8 +147,8 @@
               <a href="https://instagram.com/c1v0/" title="c1v0 on Instagram">Instagram</a>
             </li>
             <li>
-              <i class="fa fa-behance-square"></i>
-              <a href="https://www.behance.net/chrisvogt" title="Chris Vogt on Behance">Behance</a>
+              <i class="fa fa-github-square"></i>
+              <a href="https://github.com/chrisvogt" title="Chris Vogt on GitHub">GitHub</a>
             </li>
           <ul>
         </div>
@@ -181,8 +158,9 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/bower_components/foundation/js/foundation.js"></script>
     <script src="/bower_components/highcharts/highcharts.js"></script>
-    <script src="/bower_components/foundation/js/foundation/foundation.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -233,13 +211,6 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
-    </script>
-
-    <script>
-      $(function() {
-        app.init();
-        salaries.init();
-      });
     </script>
   </body>
 </html>
