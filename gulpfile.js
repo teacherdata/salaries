@@ -35,14 +35,14 @@ gulp.task('scripts', () => {
 function lint (files, options) {
   return gulp.src(files)
     .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint(options))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
+    .pipe($.standard())
+    .pipe($.if(!browserSync.active, $.standard.reporter('default', options)))
 }
 
 gulp.task('lint', () => {
   return lint('app/scripts/**/*.js', {
-    fix: true
+    breakOnError: true,
+    quiet: true
   })
   .pipe(gulp.dest('app/scripts'))
 })
