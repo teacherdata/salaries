@@ -1,9 +1,11 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the BUTTON component.
+// This file contains all styles related to the ICON component.
 // -----------------------------------------------------------------------------
 
-.button {
-  &.green {
-    background-color: $primary-color;
+.icon {
+  fill: white;
+
+  &.icon-inverse {
+    fill: white;
   }
 }

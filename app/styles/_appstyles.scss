@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 /* Abstracts */
+@import 'abstracts/colors';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
@@ -14,12 +15,12 @@
 @import 'components/button';
 @import 'components/chart';
 @import 'components/controls';
+@import 'components/icon';
 @import 'components/label';
 @import 'components/promo';
 
 /* Layout */
 @import 'layout/accents';
-@import 'layout/common';
 @import 'layout/footer';
 @import 'layout/navigation';
 
