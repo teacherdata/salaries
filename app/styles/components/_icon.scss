@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 
 .icon {
-  fill: white;
+  fill: $primary-color;
 
-  &.icon-inverse {
+  &.inverse {
     fill: white;
   }
 }
