@@ -28,6 +28,7 @@
     "gulp-subtree": "^0.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.0.0",
+    "highcharts": "^5.0.12",
     "main-bower-files": "^2.5.0",
     "standard": "*",
     "wiredep": "^4.0.0"
@@ -41,5 +42,6 @@
       "$",
       "jQuery"
     ]
-  }
+  },
+  "dependencies": {}
 }
