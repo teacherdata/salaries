@@ -1,0 +1,24 @@
+.Footer {
+  font-family: Quicksand, Verdana, sans-serif;
+  padding: 24px 0;
+}
+
+.Footer p {
+  line-height: 1.6em;
+  font-size: .75em;
+}
+
+.Footer blockquote {
+  text-align: left;
+  font-weight: 300;
+  font-size: .8em;
+  margin: 0 0 1.25rem;
+  padding: .5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #ddd;
+}
+
+.Footer cite {
+  display: block;
+  font-size: .8125rem;
+  text-align: right;
+}
