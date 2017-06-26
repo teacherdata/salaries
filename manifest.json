@@ -1,0 +1,15 @@
+{
+  "short_name": "TeacherSalaryInfo",
+  "name": "Average teacher salary by state",
+  "icons": [
+    {
+      "src": "images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#004D40",
+  "background_color": "#004D40"
+}
