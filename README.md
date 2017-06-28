@@ -1,5 +1,6 @@
-[![Build status](https://img.shields.io/travis/teacherdata/salaries.svg?branch=master&style=flat-square)](https://travis-ci.org/teacherdata/salaries)
 [![GitHub release](https://img.shields.io/github/release/teacherdata/salaries.svg?style=flat-square)](https://github.com/teacherdata/salaries/releases)
+[![Build status](https://img.shields.io/travis/teacherdata/salaries.svg?branch=master&style=flat-square)](https://travis-ci.org/teacherdata/salaries)
+[![Coverage Status](https://coveralls.io/repos/github/teacherdata/salaries/badge.svg?branch=enhance%2Freporting)](https://coveralls.io/github/teacherdata/salaries?branch=enhance%2Freporting)
 [![GitHub license](https://img.shields.io/github/license/teacherdata/salaries.svg?style=flat-square)](https://github.com/teacherdata/salaries/blob/master/LICENSE)
 
 # Compare U.S. Teacher Salaries: 1969 to 2013
