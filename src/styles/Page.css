@@ -12,6 +12,7 @@ h1 {
   margin-top: 0;
   font-size: .875em;
   padding: 0 0 12px;
+  word-wrap: break-word;
 }
 
 .subhead {
