@@ -1,18 +1,34 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Chips from './Chips'
+import Chip from 'material-ui/Chip'
 
-import * as CONTENT from '../../../content/text'
+describe('<Chips />', () => {
+  function setup(chips = []) {
+    const props = {
+      chipData: chips,
+      onDeleteState: jest.fn()
+    }
 
-function setup(chips = {}) {
-  const props = {
-    chipData: chips,
-    onDeleteState: jest.fn()
+    return shallow(<Chips {...props} />)
   }
 
-  return shallow(<Chips {...props} />)
-}
+  it('renders without chips', () => {
+    setup()
+  })
 
-it('renders without crashing', () => {
-  const wrapper = setup()
+  it('renders with chip', () => {
+    const wrapper = setup([
+      {
+        key: 'CA',
+        label: 'California'
+      },
+      {
+        key: 'AZ',
+        label: 'Arizona'
+      }
+    ])
+    expect(wrapper.find(<Chip />)).toBeDefined()
+  })
 })
+

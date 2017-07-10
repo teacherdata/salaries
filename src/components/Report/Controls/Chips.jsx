@@ -9,7 +9,7 @@ const STYLES = {
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
-  },
+  }
 }
 
 /**
