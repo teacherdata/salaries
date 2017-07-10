@@ -9,7 +9,7 @@ const STYLES = {
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
-  },
+  }
 }
 
 /**
@@ -35,10 +35,16 @@ export default class Chips extends Component {
     )
   }
 
+  getChips() {
+    if (this.props.chipData && this.props.chipData.length > 0) {
+      return this.props.chipData.map(this.renderChip, this)
+    }
+  }
+
   render() {
     return (
       <div style={this.styles.wrapper}>
-        {this.props.chipData.map(this.renderChip, this)}
+        {this.getChips()}
       </div>
     )
   }
