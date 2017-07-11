@@ -1,15 +1,15 @@
-[![GitHub release](https://img.shields.io/github/release/teacherdata/salaries.svg?style=flat-square)](https://github.com/teacherdata/salaries/releases)
-[![Build status](https://img.shields.io/travis/teacherdata/salaries.svg?branch=master&style=flat-square)](https://travis-ci.org/teacherdata/salaries)
-[![Coverage Status](https://coveralls.io/repos/github/teacherdata/salaries/badge.svg?branch=enhance%2Freporting)](https://coveralls.io/github/teacherdata/salaries?branch=master)
-[![GitHub license](https://img.shields.io/github/license/teacherdata/salaries.svg?style=flat-square)](https://github.com/teacherdata/salaries/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/teacherdata/salaries.svg)](https://github.com/teacherdata/salaries/releases)
+[![Build status](https://travis-ci.org/teacherdata/salaries.svg)](https://travis-ci.org/teacherdata/salaries)
+[![Coverage Status](https://coveralls.io/repos/github/teacherdata/salaries/badge.svg)](https://coveralls.io/github/teacherdata/salaries)
+[![GitHub license](https://img.shields.io/github/license/teacherdata/salaries.svg)](https://github.com/teacherdata/salaries/blob/master/LICENSE)
 
 # Compare U.S. Teacher Salaries: 1969 to 2013
 
-Compare two states to review a timeline of the estimated average annual salary of teachers in public elementary and secondary schools between 1969 and 2013 for each state.
+Compare the estimated average annual salary of teachers in public elementary and secondary schools between 1969 and 2013 by US state.
 
 Powered by data from the NCES [Digest of Education Statistics](https://nces.ed.gov/programs/digest/d13/tables/dt13_211.60.asp).
 
-View live @ [teachersalary.info](http://teachersalary.info).
+View live @ [teachersalary.info](https://teachersalary.info).
 
 ## Screenshot
 
