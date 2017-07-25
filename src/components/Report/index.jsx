@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactHighcharts from 'react-highcharts'
+import queryString from 'query-string'
 import initHighcharts from '../Visualization/initHighcharts'
 import SalariesHelper from '../../helpers/SalariesHelper'
 import StateHelper from '../../helpers/StateHelper'
@@ -16,14 +17,26 @@ class Report extends Component {
     this.States = new StateHelper(require('../../data/states.json'))
 
     this.state = {
-      states: ['NY', 'CA', 'AZ'],
+      states: this.getInitialStates(),
       config: {}
     }
+
+    this.getInitialStates()
 
     this.handleControlChange = this.handleControlChange.bind(this)
     this.handleDeleteState = this.handleDeleteState.bind(this)
 
     initHighcharts()
+  }
+
+  getInitialStates () {
+    const parsed = queryString.parse(this.props.location.search);
+
+    if ('states' in parsed) {
+      return parsed.states.split(',')
+    } else {
+      return ['AZ', 'CA', 'NY']
+    }
   }
 
   componentWillMount () {
