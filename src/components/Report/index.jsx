@@ -13,7 +13,7 @@ class Report extends Component {
     super(props)
 
     this.Salaries = new SalariesHelper(require('../../data/salaries.json'))
-    this.States = new StateHelper(require('../../data/states.json'))
+    this.States = new StateHelper(require('../../data/uspsStateCodes.json'))
 
     this.state = {
       states: ['NY', 'CA', 'AZ'],
