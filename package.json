@@ -30,11 +30,12 @@
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.* ",
-    "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "npm run build && gh-pages -d build",
-    "test": "react-scripts test --coverage --env=jsdom && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "seed": "node src/parser.js",
+    "start": "react-scripts start",
+    "test": "react-scripts test --coverage --env=jsdom && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {}
 }
