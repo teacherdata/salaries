@@ -1,25 +1,9 @@
-/*
-
-// Example: wb.Sheets['Digest 2013 Table 211.60'].A2.v
-
-Row A = Title Row
-
-Current: Rows B – H
-Constant: I-O
-
-A5 = US
-A6 = Alabama
-A66 = Wyoming
-
-* DC takes up two rows
-
-*/
-
+const State = require('./State.js')
 const XLSX = require('../node_modules/xlsx/')
-const states = require('./data/states.js')
 const fs = require('fs')
-const datasource = 'https://nces.ed.gov/programs/digest/d13/tables/xls/tabn211.60.xls'
-const file = './src/data/tabn211.60.xls'
+const states = require('./data/states.js')
+
+const filepath = './src/data/tabn211.60.xls'
 const sheet = 'Digest 2013 Table 211.60'
 const ranges = {
   current: 'BCDEFGH'.split(''),
@@ -35,25 +19,6 @@ const opts = {
 	cellDates: false
 }
 
-/** State constructor */
-function State(slug, name, code, current, constant) {
-  this.slug = slug
-  this.name = name
-  this.code = code
-  this.salaries = {
-    current: current,
-    constant: constant
-  }
-}
-
-/**
- * Parses a series (row) of state salary data.
- *
- * @param {*} sheet
- * @param {*} stateNum
- * @param {*} type
- * @return
- */
 const parseRow = (sheet, stateNum, type) => {
   let series = [];
 
@@ -92,13 +57,12 @@ const saveFile = data => {
 }
 
 try {
-  const wb = XLSX.readFile(file, opts)
+  const wb = XLSX.readFile(filepath, opts)
   const parsed = parseSheet(wb.Sheets[sheet])
 
   saveFile(parsed)
 } catch(e) {
-	const msg = ": error parsing " + file + ": " + e
+	const msg = ": error parsing " + filepath + ": " + e
 	console.error(msg)
 	process.exit(3)
 }
-
