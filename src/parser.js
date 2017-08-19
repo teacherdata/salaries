@@ -1,10 +1,8 @@
-const State = require('./State.js')
+const State = require('./State')
 const XLSX = require('../node_modules/xlsx/')
 const fs = require('fs')
-const states = require('./data/states.js')
+const states = require('./data/states')
 
-const filepath = './src/data/tabn211.60.xls'
-const sheet = 'Digest 2013 Table 211.60'
 const ranges = {
   current: 'BCDEFGH'.split(''),
   constant: 'IJKLMNO'.split('')
@@ -46,23 +44,36 @@ const parseSheet = sheet => {
 }
 
 const saveFile = data => {
-  const path = 'src/data/stateData.json'
-  fs.writeFile(path, JSON.stringify(data), err => {
-    if (err) {
-      console.log('ERROR', err)
-    } else {
-      console.log('SUCCESS')
+  return new Promise((resolve, reject) => {
+    const path = 'src/data/stateData.json'
+
+    fs.writeFile(path, JSON.stringify(data), err => {
+      if (err) {
+        reject(err)
+      } else {
+        resolve('File saved successfully.')
+      }
+    })
+  })
+}
+
+const parser = (filepath, sheet) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const wb = XLSX.readFile('src/211.60.xls', opts)
+      const parsed = parseSheet(wb.Sheets[sheet])
+
+      console.log(parsed);
+
+      saveFile(parsed).then((result) => {
+        resolve(result)
+      }, (err) => {
+        reject(err)
+      })
+    } catch(err) {
+      reject(err)
     }
   })
 }
 
-try {
-  const wb = XLSX.readFile(filepath, opts)
-  const parsed = parseSheet(wb.Sheets[sheet])
-
-  saveFile(parsed)
-} catch(e) {
-	const msg = ": error parsing " + filepath + ": " + e
-	console.error(msg)
-	process.exit(3)
-}
+module.exports = parser

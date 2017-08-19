@@ -33,7 +33,7 @@
     "build": "react-scripts build",
     "deploy": "npm run build && gh-pages -d build",
     "eject": "react-scripts eject",
-    "seed": "node src/parser.js",
+    "seed": "node src/seeder",
     "start": "react-scripts start",
     "test": "react-scripts test --coverage --env=jsdom && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
