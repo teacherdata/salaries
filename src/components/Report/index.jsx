@@ -12,8 +12,8 @@ import Notice from './Notice'
 import '../../styles/Report.css'
 
 class Report extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super(...arguments)
 
     this.Salaries = new SalariesHelper(require('../../data/salaries.json'))
     this.States = new StateHelper(require('../../data/states.json'))
@@ -122,7 +122,9 @@ class Report extends Component {
 }
 
 Report.contextTypes = {
-  mixpanel: PropTypes.object.isRequired
+  mixpanel: PropTypes.shape({
+    track: PropTypes.func.isRequired
+  }).isRequired
 }
 
 export default Report
