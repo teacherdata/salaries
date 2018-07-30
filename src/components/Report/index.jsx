@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 import ReactHighcharts from 'react-highcharts'
 import initHighcharts from '../Visualization/initHighcharts'
 import SalariesHelper from '../../helpers/SalariesHelper'
@@ -6,11 +8,12 @@ import StateHelper from '../../helpers/StateHelper'
 import chartOptions from '../../data/chartOptions'
 import Controls from './Controls/'
 import Notice from './Notice'
+
 import '../../styles/Report.css'
 
 class Report extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super(...arguments)
 
     this.Salaries = new SalariesHelper(require('../../data/salaries.json'))
     this.States = new StateHelper(require('../../data/states.json'))
@@ -67,6 +70,10 @@ class Report extends Component {
         config: this.getConfig(prevState.states)
       }
     })
+
+    this.context.mixpanel.track('Add State', {
+      State: this.States.states[v.newState]
+    })
   }
 
   handleDeleteState (key) {
@@ -82,10 +89,19 @@ class Report extends Component {
         config: this.getConfig(prevState.states)
       }
     })
+
+    this.context.mixpanel.track('Remove State', {
+      State: this.States.states[key]
+    })
   }
 
   render() {
     const selectedStates = this.States.getByKeys(this.state.states)
+    const stateNamesToTrack = selectedStates.map(state => state.label)
+
+    this.context.mixpanel.track('Salary Comparison', {
+      States: stateNamesToTrack
+    })
 
     return (
       <div className="Report">
@@ -103,6 +119,12 @@ class Report extends Component {
       </div>
     )
   }
+}
+
+Report.contextTypes = {
+  mixpanel: PropTypes.shape({
+    track: PropTypes.func.isRequired
+  }).isRequired
 }
 
 export default Report
